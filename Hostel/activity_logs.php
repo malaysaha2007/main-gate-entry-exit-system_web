@@ -16,7 +16,8 @@ if ($role === 'Guard') {
     // Guard should not access activity logs
     header("Location: dashboard.php");
     exit;
-}
+
+    }
 
 /* ---------------- ROLE-BASED QUERY ---------------- */
 $collection = $db->activity_logs;
