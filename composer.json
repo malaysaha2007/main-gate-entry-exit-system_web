@@ -1,0 +1,9 @@
+{
+  "name": "pr/project",
+  "description": "PR Project MongoDB setup",
+  "type": "project",
+  "require": {
+    "mongodb/mongodb": "^2.1",
+    "phpmailer/phpmailer": "^7.0"
+  }
+}
