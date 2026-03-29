@@ -433,11 +433,11 @@
       <div class="nav-center">
         <nav class="nav-links">
           <a href="/PR Project/Home/index.php" class="active">
-            Dashboard
+            Home
           </a>
 
           <a href="/PR Project/logs/role_login.php">
-            Logs
+            Activity Logs
           </a>
 <div class="dropdown">
   <a href="#">Login <span class="arrow"></span>

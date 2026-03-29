@@ -332,7 +332,9 @@ footer{
     <div class="nav-center">
       <nav class="nav-links">
 
-        <a href="/PR Project/Home/index.php">Dashboard</a>
+        <a href="/PR Project/Home/index.php">Home</a>
+        <a href="\PR Project\Hostel\dashboard.php">Dashboard</a>
+
         <a href="/PR Project/logs/role_login.php">Logs</a>
 
         <div class="dropdown">

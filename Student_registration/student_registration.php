@@ -59,6 +59,7 @@ body{
 
 .brand-logo img {
   width:50px;
+  border-radius: 8px;
 }
 
 .brand-title {
@@ -99,13 +100,31 @@ body{
 .dropdown { position:relative; }
 
 .dropdown-menu {
-  position:absolute;
-  top:110%;
-  left:0;
-  display:none;
-  flex-direction:column;
-  background:#10213f;
-  border-radius:10px;
+  position: absolute;
+  top: 110%;
+  left: 0;
+  display: none;
+  flex-direction: column;
+  min-width: 180px; /* FIX WIDTH */
+  background: #10213f;
+  border-radius: 12px;
+  padding: 8px; /* ADD SPACE */
+  gap: 6px; /* SPACE BETWEEN ITEMS */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  z-index: 100;
+}
+.dropdown-menu a {
+  display: block;
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #e2e8f0;
+  font-size: 14px;
+}
+
+.dropdown-menu a:hover {
+  background: rgba(255,255,255,0.08);
 }
 
 .dropdown:hover .dropdown-menu { display:flex; }
@@ -123,9 +142,14 @@ body{
   display:flex;
   align-items:center;
   gap:10px;
+  font-size: 14px;
   padding:6px 12px;
   border-radius:25px;
   background:rgba(255,255,255,0.05);
+}
+.nav-role-badge small {
+  color: var(--text-muted);
+  font-size: 11px;
 }
 
 .nav-role-icon {
@@ -154,19 +178,22 @@ body{
 .page-top {
   display:flex;
   align-items:center;
-  gap:15px;
+  gap:6px;
   padding:16px 24px;
 }
 
 .header-left img {
-  width:50px;
+  display: block;
+  width: 50px;
+  border-radius: 5px;
+  
 }
 
 .portal-name h1 { font-size:22px; }
 .portal-name p { font-size:12px;color:var(--text-muted); }
 
 /* ===== PAGE ===== */
-.container{max-width:1000px;margin:40px auto;padding:20px;}
+.container{max-width:1000px;margin:40px auto;padding:10px;}
 h1{text-align:center;}
 .subtitle{text-align:center;color:#9ca3af;margin-bottom:30px;}
 

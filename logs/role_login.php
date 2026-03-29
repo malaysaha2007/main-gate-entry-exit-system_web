@@ -139,7 +139,7 @@ function toggleOptions(){
 <!-- 🔹 HEADER -->
 <div class="page-top">
   <div class="header-left">
-    <img src="/PR Project/student_logo.png" alt="logo">
+    <img src="activity_logs_logo.jpg" alt="logo">
   </div>
 
   <div class="header-center portal-name">
