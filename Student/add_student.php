@@ -8,7 +8,7 @@ if (
     !isset($_SESSION['user']) ||
     $_SESSION['user']['type'] !== 'HOSTEL_STAFF'
 ) {
-    header("Location: ../Hostel/login.php");
+    header("Location: Hostel/login.php");
     exit;
 }
 
@@ -63,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 'created_at' => new MongoDB\BSON\UTCDateTime()
             ]);
 
-            header("Location: ../Hostel/view_students.php");
+            header("Location: Hostel/view_students.php");
             exit;
         }
     }

@@ -247,7 +247,7 @@ $vacationLogs = $students->find([
 
       <!-- LEFT -->
       <div class="brand">
-        <img src="/PR Project/Iiitdmj_logo.jpg">
+        <img src="../Iiitdmj_logo.jpg">
         <div>
           <div class="brand-title">PDPM IIITDMJ Entry–Exit Portal</div>
           <div class="brand-sub">Student Monitoring System</div>
@@ -257,10 +257,9 @@ $vacationLogs = $students->find([
       <!-- CENTER -->
       <div class="nav-center">
         <div class="nav-links">
-          <a href="/PR Project/Home/index.php">Home</a>
-          <a href="\PR Project\Hostel\activity_logs.php">Logs</a>
-          <a href="/PR Project/Rules/index.php">Rules</a>
-          <a href="/PR Project/camera.php">Camera</a>
+          <a href="../index.php">Home</a>
+          <a href="../Hostel\activity_logs.php">Logs</a>
+          <a href="../Rules/index.php">Rules</a>
         </div>
       </div>
 
@@ -279,7 +278,7 @@ $vacationLogs = $students->find([
 
         <div class="logout">
           
-          <a href="logout.php">Logout</a>
+          <a href="../Hostel/logout.php">Logout</a>
         </div>
 
       </div>

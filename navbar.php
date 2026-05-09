@@ -269,7 +269,7 @@
   <div class="navbar">
     <div class="brand">
       <div class="brand-logo">
-        <img src="/PR Project\Iiitdmj_logo.jpg" alt="College Logo">
+        <img src="../Iiitdmj_logo.jpg" alt="College Logo">
       </div>
       <div class="brand-text">
         <div class="brand-title">PDPM IIITDMJ Entry–Exit Portal</div>
@@ -279,30 +279,28 @@
 
     <div class="nav-center">
       <nav class="nav-links">
-        <a href="/PR Project/Home/index.php" class="active">
+        <a href="../index.php" class="active">
           Home
         </a>
 
-        <a href="/PR Project/logs/role_login.php">
+        <a href="../logs/role_login.php">
           Activity Logs
         </a>
 
         <div class="dropdown">
           <a href="#">Login <span class="arrow"></span>
           <div class="dropdown-menu">
-            <a href="/PR Project/Student/student_login.php">Student Login</a>
-            <a href="/PR Project/Hostel/login.php">Hostel Login</a>
-            <a href="/PR Project/Admin/login.php">Admin Login</a>
+            <a href="../Student/student_login.php">Student Login</a>
+            <a href="../Hostel/login.php">Hostel Login</a>
+            <a href="../Admin/login.php">Admin Login</a>
           </div>
         </div>
 
-        <a href="/PR Project/Rules/index.php">
-          Rules
+        <a href="../Rules/index.php">
+          Rule
         </a>
 
-        <a href="/PR Project/camera.php">
-          <span style="font-size:15px;">📷</span> Camera
-        </a>
+        
       </nav>
     </div>
   </div>

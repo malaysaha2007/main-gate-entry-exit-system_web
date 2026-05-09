@@ -49,7 +49,7 @@ if (isset($_POST['login'])) {
                     'level'     => $level
                 ];
 
-                header("Location: /PR Project/Admin/dashboard.php");
+                header("Location: Admin/dashboard.php");
                 exit;
             }
         }
@@ -187,7 +187,7 @@ footer {
 <!-- HEADER -->
 <div class="page-top">
   <div class="header-left">
-    <img src="/PR Project/student_logo.png" alt="logo">
+    <img src="../student_logo.png" alt="logo">
   </div>
 
   <div class="header-center portal-name">

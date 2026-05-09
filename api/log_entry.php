@@ -6,7 +6,7 @@ header("Content-Type: application/json");
 
 require "../db.php";
 
-/* 🔥 LOG ENTRY POINT */
+/*  LOG ENTRY POINT */
 error_log("log_entry.php HIT");
 
 $raw = file_get_contents("php://input");
@@ -22,7 +22,7 @@ if (!$data) {
 
 error_log("DECODED DATA: " . json_encode($data));
 
-/* 🔥 FORCE INSERT — NO CONDITIONS */
+/*  FORCE INSERT — NO CONDITIONS */
 $doc = [
     "name"       => $data["name"] ?? "UNKNOWN",
     "action"     => "ENTRY",   // force ENTRY for test

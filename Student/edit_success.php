@@ -129,7 +129,7 @@ a{
   </div>
 
   <div class="buttons">
-    <a href="view_students.php" class="back">Back to Students</a>
+    <a href="../Hostel\view_students.php" class="back">Back to Students</a>
     <a href="../Hostel/dashboard.php" class="dashboard">Dashboard</a>
   </div>
 </div>

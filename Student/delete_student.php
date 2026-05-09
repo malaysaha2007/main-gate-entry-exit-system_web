@@ -10,7 +10,7 @@ if (
     !isset($_SESSION['user']) ||
     $_SESSION['user']['type'] !== 'HOSTEL_STAFF'
 ) {
-    header("Location: ../Hostel/login.php");
+    header("Location: Hostel/login.php");
     exit;
 }
 
@@ -85,5 +85,5 @@ if ($result->getDeletedCount() !== 1) {
 }
 
 /* ---------------- REDIRECT ---------------- */
-header("Location: ../Hostel/view_students.php");
+header("Location: Hostel/view_students.php");
 exit;

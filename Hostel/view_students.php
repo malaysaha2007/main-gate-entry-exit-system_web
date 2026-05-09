@@ -271,14 +271,34 @@ body{
   padding:28px;
 }
 
-.add-btn{
-  display:inline-block;
-  margin-bottom:20px;
-  padding:10px 18px;
-  background:var(--primary);
-  color:#fff;
-  border-radius:8px;
-  text-decoration:none;
+.add-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 10px 20px;
+  border-radius: 999px;
+
+  background: transparent; /* 🔥 TRANSPARENT */
+  color: #3b82f6;
+
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+
+  border: 1px solid rgba(59,130,246,0.5);
+
+  backdrop-filter: blur(6px); /* glass effect */
+  transition: all 0.25s ease;
+}
+.add-btn:hover {
+  background: rgba(59,130,246,0.15);
+  border-color: #3b82f6;
+  color: #60a5fa;
+  box-shadow: 0 0 12px rgba(59,130,246,0.4);
+}
+.add-btn:active {
+  transform: scale(0.96);
 }
 
 table{
@@ -295,14 +315,67 @@ th{
   color:var(--text-muted);
 }
 
-.actions a{
-  margin-right:10px;
+.actions {
+  display: flex;
+  justify-content: center;  /* CENTER HORIZONTALLY */
+  align-items: center;
+  gap: 8px;
 }
 
-.view{color:var(--secondary);}
-.edit{color:#22c55e;}
-.delete{color:#ef4444;}
+/* COMMON BUTTON STYLE */
+.actions a {
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  text-decoration: none;
+  font-weight: 500;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+}
 
+/* VIEW */
+.actions a.view {
+  background: rgba(6,182,212,0.15);
+  color: #06b6d4;
+  border-color: rgba(6,182,212,0.4);
+}
+
+.actions a.view:hover {
+  background: rgba(6,182,212,0.3);
+}
+
+/* EDIT */
+.actions a.edit {
+  background: rgba(34,197,94,0.15);
+  color: #22c55e;
+  border-color: rgba(34,197,94,0.4);
+}
+
+.actions a.edit:hover {
+  background: rgba(34,197,94,0.3);
+}
+
+/* DELETE */
+.actions a.delete {
+  background: rgba(239,68,68,0.15);
+  color: #ef4444;
+  border-color: rgba(239,68,68,0.4);
+}
+
+.actions a.delete:hover {
+  background: rgba(239,68,68,0.3);
+}
+th, td {
+  padding: 14px;
+  border-bottom: 1px solid var(--border);
+  text-align: center;   /* 🔥 CENTER EVERYTHING */
+  vertical-align: middle;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
 footer{
   margin-top:80px;
   border-top:1px solid var(--border);
@@ -321,7 +394,7 @@ footer{
 
     <div class="brand">
       <div class="brand-logo">
-        <img src="/PR Project/Iiitdmj_logo.jpg">
+        <img src="../Iiitdmj_logo.jpg">
       </div>
       <div>
         <div class="brand-title">PDPM IIITDMJ Entry–Exit Portal</div>
@@ -332,22 +405,21 @@ footer{
     <div class="nav-center">
       <nav class="nav-links">
 
-        <a href="/PR Project/Home/index.php">Home</a>
-        <a href="\PR Project\Hostel\dashboard.php">Dashboard</a>
+        <a href="../index.php">Home</a>
+        <a href="../Hostel\dashboard.php">Dashboard</a>
 
-        <a href="/PR Project/logs/role_login.php">Logs</a>
+        <a href="logs/role_login.php">Logs</a>
 
         <div class="dropdown">
           <a href="#">Login <span class="arrow"></span></a>
           <div class="dropdown-menu">
-            <a href="/PR Project/Student/student_login.php">Student Login</a>
-            <a href="/PR Project/Hostel/login.php">Hostel Login</a>
-            <a href="/PR Project/Admin/login.php">Admin Login</a>
+            <a href="../Student/student_login.php">Student Login</a>
+            <a href="../Hostel/login.php">Hostel Login</a>
+            <a href="../Admin/login.php">Admin Login</a>
           </div>
         </div>
 
-        <a href="/PR Project/Rules/index.php">Rules</a>
-        <a href="/PR Project/camera.php">Camera</a>
+        <a href="../Rules/index.php">Rules</a>
 
       </nav>
     </div>
@@ -367,7 +439,7 @@ footer{
 
   <!-- LOGOUT -->
   <div class="logout">
-    <a href="/PR Project/logout.php"
+    <a href="logout.php"
        onclick="return confirm('Are you sure you want to logout?')">
       Logout
     </a>
@@ -382,7 +454,7 @@ footer{
 <!-- HEADER -->
 <div class="page-top">
   <div class="header-left">
-    <img src="/PR Project/hostel_logo.jpg">
+    <img src="../hostel_logo.jpg">
   </div>
   <div class="portal-name">
     <h1>Hostel Portal</h1>
@@ -399,13 +471,13 @@ footer{
   <div class="card">
 
     <?php if ($role === 'Warden' || $role === 'Caretaker'): ?>
-      <a href="../Student_registration/student_registration.php" class="add-btn">Add Student</a>
+      <a href="import_students.php" class="add-btn">+ Add Student</a>
     <?php endif; ?>
 
     <table>
       <tr>
         <th>Name</th>
-        <th>Roll No</th>
+        <th>Roll No</th>  
         <th>Room</th>
         <th>Actions</th>
       </tr>

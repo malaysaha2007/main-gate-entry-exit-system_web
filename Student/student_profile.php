@@ -440,7 +440,7 @@ tr.vacation{
 
     <div class="brand">
       <div class="brand-logo">
-        <img src="/PR Project\Iiitdmj_logo.jpg" alt="College Logo">
+        <img src="../Iiitdmj_logo.jpg" alt="College Logo">
       </div>
       <div class="brand-text">
         <div class="brand-title">PDPM IIITDMJ Entry–Exit Portal</div>
@@ -450,30 +450,28 @@ tr.vacation{
 
     <div class="nav-center">
       <nav class="nav-links">
-        <a href="/PR Project/Home/index.php" class="active">Dashboard</a>
+        <a href="../Home/index.php" class="active">Dashboard</a>
 
-        <a href="/PR Project/logs/role_login.php">Logs</a>
+        <a href="../logs/role_login.php">Logs</a>
 
         <div class="dropdown">
           <a href="#">Login <span class="arrow"></span></a>
           <div class="dropdown-menu">
-            <a href="/PR Project/Student/student_login.php">Student Login</a>
-            <a href="/PR Project/Hostel/login.php">Hostel Login</a>
-            <a href="/PR Project/Admin/login.php">Admin Login</a>
+            <a href="../Student/student_login.php">Student Login</a>
+            <a href="../Hostel/login.php">Hostel Login</a>
+            <a href="../Admin/login.php">Admin Login</a>
           </div>
         </div>
 
-        <a href="/PR Project/Rules/index.php">Rules</a>
+        <a href="../Rules/index.php">Rules</a>
 
-        <a href="/PR Project/camera.php">
-          <span style="font-size:15px;">📷</span> Camera
-        </a>
+      
       </nav>
     </div>
 
     <!-- ONLY ADDITION -->
 <div>
-  <a href="/PR Project/Home/index.php"
+  <a href="../Home/index.php"
      onclick="return confirm('Are you sure you want to logout?')"
      style="
        text-decoration:none;
@@ -494,7 +492,7 @@ tr.vacation{
 <div class="page-top">
   <div class="header-left">
     <img
-      src="/PR Project/student_logo.png"
+      src="../student_logo.png"
       alt="logo"
     />
   </div>

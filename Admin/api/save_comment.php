@@ -78,7 +78,7 @@ if (!empty($_FILES['document']['name'])) {
 
     $fileData = [
         'name' => $fileName,
-        'path' => '/PR Project/Admin/Comments_documents/' . $fileName,
+        'path' => 'Admin/Comments_documents/' . $fileName,
         'type' => $_FILES['document']['type']
     ];
 }

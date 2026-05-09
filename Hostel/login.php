@@ -32,7 +32,7 @@ if (isset($_POST['login'])) {
             'type'     => 'HOSTEL_STAFF'
         ];
 
-        header("Location: /PR Project/Hostel/view_students.php");
+        header("Location: Hostel/view_students.php");
         exit;
     }
 }
@@ -159,7 +159,7 @@ button {
 <!-- ✅ TOP SECTION -->
 <div class="page-top">
   <div class="header-left">
-    <img src="/PR Project/hostel_logo.jpg" alt="logo">
+    <img src="../hostel_logo.jpg" alt="logo">
   </div>
 
   <div class="header-center portal-name">

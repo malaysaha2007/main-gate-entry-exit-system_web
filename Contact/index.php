@@ -160,7 +160,7 @@ footer {
 <header>
   <div class="header-left">
     <img
-      src="/PR Project/Logo.jpg"
+      src="logo.jpg"
       style="height:90px; width:90px; border-radius:50%; background:#fff; padding:5px; object-fit:contain;"
       alt="logo"
     />
@@ -173,14 +173,14 @@ footer {
 
   <div class="header-right">
     <nav>
-      <a href="/PR Project/Home/index.php">Home</a>
+      <a href="../index.php">Home</a>
     </nav>
   </div>
 </header>
 
 <div class="container">
   <div class="contact-box">
-    <img src="Iiitdmj-logo.jpg" alt="IIITDMJ Logo" class="college-logo">
+    <img src="logo.jpg" alt="../IIITDMJ Logo" class="college-logo">
 
     <h2>Hostel Administration</h2>
     <p class="desc">For technical support regarding the SGMS (Smart Gate Monitoring System) or portal access, please contact the administration.</p>

@@ -2,30 +2,32 @@
 session_start();
 require '../db.php';
 
-// ---------- AUTH ----------
 if (!isset($_SESSION['admin'])) {
   header("Location: login.php");
   exit;
 }
 
-/*
-|--------------------------------------------------------------------------
-| CURFEW TIME CONFIG
-|--------------------------------------------------------------------------
-| Change later if needed
-*/
-$CURFEW_TIME = "10:00"; // 10 AM
+date_default_timezone_set('Asia/Kolkata');
 
-// ---------- FETCH LOGS ----------
-$logs = $db->entry_exit_logs->find([], [
+$CURFEW_TIME = "11:00:00";
+
+// ✅ FIXED QUERY
+$logs = $db->entry_exit_logs->find([
+  "inTime" => null,
+  '$or' => [
+    ["mailSent" => ['$exists' => false]],
+    ["mailSent" => false]
+  ]
+], [
   'sort' => ['hostel' => 1]
 ]);
 
 function isCurfewViolated($outTime, $inTime, $curfewTime) {
-  if ($inTime) return false;
-  if (!$outTime) return false;
-  $out = substr($outTime, 11, 5); // HH:MM
-  return $out < $curfewTime;
+  if (!empty($inTime)) return false;
+  if (empty($outTime)) return false;
+
+  $currentTime = date("H:i:s");
+  return $currentTime >= $curfewTime;
 }
 ?>
 <!doctype html>
@@ -52,6 +54,11 @@ th,td {
   border-bottom:1px solid rgba(255,255,255,0.15);
 }
 th { color:#98a6bf; }
+
+.violation {
+  background:rgba(255,0,0,0.12);
+}
+
 .action-btn {
   padding:8px 14px;
   border:none;
@@ -84,28 +91,30 @@ Students outside after curfew (<b><?php echo $CURFEW_TIME; ?></b>)
   <th></th>
   <th>Name</th><th>Roll</th><th>Hostel</th><th>Room</th>
   <th>Phone</th><th>Email</th>
-  <th>Purpose</th><th>Out Time</th><th>In Time</th>
+  <th>Purpose</th><th>Out Time</th><th>Status</th>
 </tr>
 </thead>
 <tbody>
+
 <?php foreach ($logs as $row): ?>
+
 <?php if (isCurfewViolated($row['outTime'] ?? null, $row['inTime'] ?? null, $CURFEW_TIME)): ?>
-<tr>
+
+<tr class="violation">
   <td>
     <input type="checkbox" class="chk" name="students[]" checked
-  value='<?php echo json_encode([
-    "name"     => $row["name"] ?? "",
-    "roll"     => $row["roll"] ?? "",
-    "email"    => $row["email"] ?? "",
-    "hostel"   => $row["hostel"] ?? "",
-    "room"     => $row["room"] ?? "",
-    "phone"    => $row["phone"] ?? "",
-    "purpose"  => $row["purpose"] ?? "",
-    "outTime"  => $row["outTime"] ?? "",
-    "inTime"   => $row["inTime"] ?? ""
-  ], JSON_HEX_APOS | JSON_HEX_QUOT); ?>'>
-
+      value='<?php echo json_encode([
+        "name"     => $row["name"] ?? "",
+        "roll"     => $row["roll"] ?? "",
+        "email"    => $row["email"] ?? "",
+        "hostel"   => $row["hostel"] ?? "",
+        "room"     => $row["room"] ?? "",
+        "phone"    => $row["phone"] ?? "",
+        "purpose"  => $row["purpose"] ?? "",
+        "outTime"  => $row["outTime"] ?? ""
+      ], JSON_HEX_APOS | JSON_HEX_QUOT); ?>'>
   </td>
+
   <td><?= htmlspecialchars($row['name']) ?></td>
   <td><?= htmlspecialchars($row['roll']) ?></td>
   <td><?= htmlspecialchars($row['hostel']) ?></td>
@@ -114,10 +123,12 @@ Students outside after curfew (<b><?php echo $CURFEW_TIME; ?></b>)
   <td><?= htmlspecialchars($row['email'] ?? '') ?></td>
   <td><?= htmlspecialchars($row['purpose']) ?></td>
   <td><?= htmlspecialchars($row['outTime']) ?></td>
-  <td><?= htmlspecialchars($row['inTime']) ?></td>
+  <td style="color:red; font-weight:bold;">VIOLATION</td>
 </tr>
+
 <?php endif; ?>
 <?php endforeach; ?>
+
 </tbody>
 </table>
 

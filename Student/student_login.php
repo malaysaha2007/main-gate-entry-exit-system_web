@@ -1,6 +1,9 @@
 <?php session_start(); ?>
+
 <?php include '../navbar.php'; ?>
+
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -51,39 +54,25 @@ body {
   gap: 18px;
 }
 
-.header-left {
-  flex: 0 0 auto;
-}
-
-
 .header-left img {
  width: 50px;
   height: 50px;
   border-radius: 8px;
-  overflow: hidden;
-  background: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .header-center {
   flex: 1;
-  padding-top: 2px;
 }
 
 .portal-name h1 {
   font-size: 25px;
   margin: 0;
-  color: var(--text-primary);
-  line-height: 1.1;
 }
 
 .portal-name p {
   margin: 6px 0 0;
   font-size: 12px;
   color: var(--text-muted);
-  line-height: 1.1;
 }
 
 /* Login Box */
@@ -117,11 +106,6 @@ body {
   border: 1px solid var(--border-light);
   background: var(--bg-input);
   color: var(--text-primary);
-  font-size: 14px;
-}
-
-.login-box input::placeholder {
-  color: var(--text-muted);
 }
 
 .actions {
@@ -139,16 +123,8 @@ body {
 }
 
 .login-box button.login {
-  background: linear-gradient(
-    90deg,
-    var(--accent-primary),
-    var(--accent-secondary)
-  );
+  background: linear-gradient(90deg,var(--accent-primary),var(--accent-secondary));
   color: var(--text-dark);
-}
-
-.login-box button.login:hover {
-  opacity: 0.9;
 }
 
 .login-box button.reset {
@@ -158,8 +134,25 @@ body {
   margin-right: 10px;
 }
 
-.login-box button.reset:hover {
-  background: rgba(239,68,68,0.15);
+/* 🔥 NEW SIGNUP BUTTON */
+.signup-link {
+  text-align: center;
+  margin-top: 18px;
+}
+
+.signup-link a {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--accent-primary);
+  color: var(--accent-primary);
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.signup-link a:hover {
+  background: rgba(59,130,246,0.15);
 }
 
 /* Footer */
@@ -169,45 +162,15 @@ footer {
   font-size: 14px;
   color: var(--text-muted);
 }
-
-/* Responsive */
-@media (max-width: 768px) {
-  .page-top {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 16px 16px 0;
-  }
-
-  .header-center {
-    padding-top: 0;
-  }
-
-  .portal-name h1 {
-    font-size: 32px;
-  }
-
-  .portal-name p {
-    font-size: 14px;
-  }
-
-  .login-box {
-    width: calc(100% - 32px);
-    margin-top: 40px;
-  }
-
- 
-}
 </style>
+
 </head>
 
 <body>
 
 <div class="page-top">
   <div class="header-left">
-    <img
-      src="/PR Project/student_logo.png"
-      alt="logo"
-    />
+    <img src="../student_logo.png" alt="logo"/>
   </div>
 
   <div class="header-center portal-name">
@@ -220,29 +183,27 @@ footer {
   <h2>Student Login</h2>
 
   <form action="student_login_backend.php" method="post" autocomplete="off">
-    <label for="studentid">Student ID</label>
-    <input
-      type="text"
-      id="studentid"
-      name="studentid"
-      required
-      placeholder="e.g. S1001"
-    />
+    <label>Student ID</label>
+    <input type="text" name="studentid" required placeholder="e.g. 24BCS137"/>
 
-    <label for="password">Password</label>
-    <input
-      type="password"
-      id="password"
-      name="password"
-      required
-      placeholder="Your password"
-    />
 
-    <div class="actions">
-      <button type="reset" class="reset">Reset</button>
-      <button type="submit" class="login">Login</button>
-    </div>
+<label>Password</label>
+<input type="password" name="password" required placeholder="Your password"/>
+
+<div class="actions">
+  <button type="reset" class="reset">Reset</button>
+  <button type="submit" class="login">Login</button>
+</div>
+
+
   </form>
+
+  <!-- 🔥 NEW BUTTON -->
+
+  <div class="signup-link">
+    <a href="student_signup.php">Sign Up for New Student</a>
+  </div>
+
 </div>
 
 <footer>

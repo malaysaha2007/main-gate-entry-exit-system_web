@@ -232,7 +232,7 @@ footer {
 <!-- HEADER -->
 <div class="page-top">
   <div class="header-left">
-    <img src="/PR Project/student_logo.png" alt="logo">
+    <img src="../student_logo.png" alt="logo">
   </div>
 
   <div class="header-center portal-name">
@@ -253,12 +253,7 @@ footer {
     </div>
   </div>
 
-  <div class="logout">
-    <a href="/PR Project/logout.php"
-       onclick="return confirm('Are you sure you want to logout?')">
-      Logout
-    </a>
-  </div>
+ 
 </div>
 
 <div class="container">

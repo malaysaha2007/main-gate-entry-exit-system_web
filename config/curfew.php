@@ -1,2 +1,2 @@
 <?php
-define('CURFEW_TIME', '01:20');
+define('CURFEW_TIME', '10:20');

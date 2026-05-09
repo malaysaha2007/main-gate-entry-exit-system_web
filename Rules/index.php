@@ -159,7 +159,7 @@ footer {
 <header>
   <div class="header-left">
     <img
-      src="/PR Project/Logo.jpg"
+      src="../rules_logo.jpg"
       style="height:90px; width:90px; border-radius:50%; background:#fff; padding:5px; object-fit:contain;"
       alt="logo"
     />
@@ -172,7 +172,7 @@ footer {
 
   <div class="header-right">
     <nav>
-      <a href="/PR Project/Home/index.php">Home</a>
+      <a href="../index.php">Home</a>
     </nav>
   </div>
 </header>
