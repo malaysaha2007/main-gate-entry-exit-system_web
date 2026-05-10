@@ -5,16 +5,10 @@ require '../db.php';
 require '../config/mail.php';
 require '../config/curfew.php';
 
-use MongoDB\Client;
 
-/* ===============================
-   MongoDB Connection
-================================ */
-$client = new Client("mongodb://localhost:27017");
-$db = $client->main_gate_entry_exit_system;
 
 /* 🔁 CHANGED COLLECTION */
-$studentsCollection = $db->student_data;     // ✅ NEW
+$studentsCollection = $db->student_auth_data;     // ✅ NEW
 $logsCollection     = $db->entry_exit_logs;
 
 /* ===============================
