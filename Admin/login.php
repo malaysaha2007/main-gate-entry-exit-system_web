@@ -49,7 +49,7 @@ if (isset($_POST['login'])) {
                     'level'     => $level
                 ];
 
-                header("Location: Admin/dashboard.php");
+                header("Location: ../Admin/dashboard.php");
                 exit;
             }
         }

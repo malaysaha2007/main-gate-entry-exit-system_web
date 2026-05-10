@@ -408,7 +408,6 @@ footer{
         <a href="../Home/index.php">Home</a>
         <a href="../Hostel\dashboard.php">Dashboard</a>
 
-        <a href="logs/role_login.php">Logs</a>
 
         <div class="dropdown">
           <a href="#">Login <span class="arrow"></span></a>
