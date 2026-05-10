@@ -32,7 +32,7 @@ if (isset($_POST['login'])) {
             'type'     => 'HOSTEL_STAFF'
         ];
 
-        header("Location: Hostel/view_students.php");
+        header("Location: view_students.php");
         exit;
     }
 }
