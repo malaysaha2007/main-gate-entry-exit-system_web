@@ -405,7 +405,7 @@ footer{
     <div class="nav-center">
       <nav class="nav-links">
 
-        <a href="../index.php">Home</a>
+        <a href="../Home/index.php">Home</a>
         <a href="../Hostel\dashboard.php">Dashboard</a>
 
         <a href="logs/role_login.php">Logs</a>

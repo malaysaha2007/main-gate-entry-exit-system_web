@@ -279,7 +279,7 @@
 
     <div class="nav-center">
       <nav class="nav-links">
-        <a href="../index.php" class="active">
+        <a href="../Home/index.php" class="active">
           Home
         </a>
 

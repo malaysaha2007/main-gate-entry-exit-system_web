@@ -173,7 +173,7 @@ footer {
 
   <div class="header-right">
     <nav>
-      <a href="../index.php">Home</a>
+      <a href="../Home/index.php">Home</a>
     </nav>
   </div>
 </header>

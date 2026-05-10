@@ -257,7 +257,7 @@ $vacationLogs = $students->find([
       <!-- CENTER -->
       <div class="nav-center">
         <div class="nav-links">
-          <a href="../index.php">Home</a>
+          <a href="../Home/index.php">Home</a>
           <a href="../Hostel\activity_logs.php">Logs</a>
           <a href="../Rules/index.php">Rules</a>
         </div>
