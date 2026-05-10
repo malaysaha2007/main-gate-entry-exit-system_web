@@ -1,1 +1,4 @@
-DirectoryIndex Home/index.php
+DirectoryIndex index.php
+
+RewriteEngine On
+RewriteRule ^$ /Home/index.php [L]
